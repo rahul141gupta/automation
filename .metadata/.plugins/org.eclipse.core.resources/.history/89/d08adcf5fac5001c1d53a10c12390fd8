@@ -1,0 +1,259 @@
+#================================================================================================================================
+                                        ## BASE URL
+#================================================================================================================================
+#Product URL
+BASE_URL=https://reg.resumenerd.com
+#Product URL domain of Load Balancer or Node by Default Value as Live
+PRODUCT_URL_TYPE=LIVE
+
+#Admin URL
+ADMIN_SEEKER_URL=https://reg.livecareer.com/nl/en/lp/lnlnl06.aspx
+
+#Optimizely Opt Out
+OPTIMIZELY_OPT_OUT=true
+
+#Product short Name for Test i.e. mpr/mpcv/rg/lc
+PRODUCT_NAME=rd
+
+#utm_source=qa add to URL
+UTM_SOURCE_APPEND=true
+
+#================================================================================================================================
+                                        ## DATA SHEET DETAIL && SUITE EXECUTION TYPE
+#================================================================================================================================
+
+#Excel Test Case File Name and Sheet Names to Execute
+TEST_CASE_FILE_NAME=RD.xlsx
+
+#Excel Test Case Sheets name with underscore ( _ ) separated values.
+TEST_CASE_SHEETS_NAME=SmokeProd
+
+#Excel Sheets to be excluded separated with underscore ( _ )
+EXCLUDE_SHEETS_NAME=NONE
+
+#Test Suites To be executed Values such as TEST_SUITE/Sanity/Smoke Single Value Per Execution
+TEST_SUITE=Smoke
+
+
+#Test Suite Pass Percentage Limit
+SUITE_PASS_PERCENTAGE=100
+
+#================================================================================================================================
+                                        ##NATIVE APP DETAILS
+#================================================================================================================================
+#Change the flag status as true while testing Native app also provide app package name and main activity name.
+NATIVE_APP=false
+APP_PACKAGE_NAME=io.selendroid.testapp
+APP_ACTIVITY_NAME=io.selendroid.testapp.HomeScreenActivity
+APP_NAME=jqlc
+
+
+#================================================================================================================================
+                                        ## BROWSER DETAIL && WAIT TIME && THIRD PARTY CLOUD SOLUTION DETAILS
+#================================================================================================================================
+#Browser for Test Supported values chrome/firefox/ie/safari/android/ios
+BROWSER_NAME=chrome
+HEADLESS=false
+
+#OS/Device/Browser Version Values for Run on Cloud Solution Providers
+OS_NAME=NONE
+BROWSER_VERSION=NONE
+OS_VERSION=NONE
+
+RUN_ON_CLOUD_DEVICE=false
+DEVICE_NAME=${cloudDeviceName}
+DEVICE_PLATFORM_NAME=${cloudDevicePlatformName}
+DEVICE_PLATFORM_VERSION=${cloudDevicePlatformVersion}
+DEVICE_ORIENTATION=CLOUD_DEVICE_ORIENTATION
+
+JS_ERROR_ENABLED=true
+BROWSER_BINARY=
+BROKEN_IMAGES_LINKS=false
+
+THIRD_PARTY_RUNNER=NONE
+THIRD_PARTY_USER_NAME=NONE
+THIRD_PARTY_API_KEY=NONE
+
+#Max Element Wait Time in Seconds
+MAX_ELEMENT_WAIT_TIME=30
+
+#Screen Shot Enabled for Each Step
+SCREEN_SHOT_ENABLED=false
+
+#To Enable Mobile Chrome Browser Emulation on Windows Desktop
+MOBILE_EMULATION_ENABLED=true
+#Supported Values Galaxy S5/Nexus 5X/Nexus 6P/Nexus 7/iPhone 5/iPhone 6/iPhone 6/iPhone 6 Plus/iPad/iPad Mini/iPad Pro
+MOBILE_EMULATION_DEVICE_NAME=Galaxy S5
+
+#ProxyDetails
+PROXY_RUN_ENABELED=false
+PROXY_COUNTRY=US
+#================================================================================================================================
+                                        ## OTHER PROPERTIES
+#================================================================================================================================
+
+#Reports Indexed Page Description/Current Run Description
+CURRENT_RUN_DESCRIPTION=Automation Run
+INDEXED_PAGE_DESCRIPTION=Bold Automation Framework
+TEST_CASE_COVERAGE=Bold WebDriver Test Cases
+TESTS_EXECUTOR_NAME=Automation Tester
+
+#Reports Version
+REPORTS_VERSION=0.2
+
+#Enable Video Recording
+ENABLE_VIDEO_RECORDING=false
+
+#Enable Fail Test Cases Detail in Mail
+ENABLE_FAIL_TEST_CASES_MAIL=false
+
+#Enable Execution History in Email
+ENABLE_EXECUTION_HISTORY_MAIL=true
+NUMBER_OF_AUTOMATION_EXECUTIONS_HISTORY=5
+#Threshhhold Time Limit for measuring automation execution performance times specified in format HH:mm:ss
+AUTOMATION_RUN_TIME_THRESHHOLD_LIMIT=00:05:00
+
+#Enable Application Under Test Errors Capturing from DB/SEQ
+ENABLE_AUT_ERRORS_CAPTURE=true
+
+#seq Server properties
+SEQ_APP_CD=RSMNA_REG_W_COR
+
+#================================================================================================================================
+                                        ## EMAIL SETTINGS
+#================================================================================================================================
+
+MAIL_HOST=mailpost.livecareer.com
+MAIL_WEBMASTER=qa-automation@bold.com
+MAIL_PORT=29
+MAIL_RECIPIENTS_SUCCESS=prashant.sharma@bold.com
+MAIL_RECIPIENTS_FAILURE=prashant.sharma@bold.com
+MAIL_ADMIN=automationtesterbold@bold.com
+MAIL_WEBMASTER_PASSWORD=automationtesterbold12
+MAIL_SUBJECT=NONE
+
+#================================================================================================================================
+                                        ## APPLICATION DEPLOYMENT URL
+#================================================================================================================================
+
+APP_DEPLOY_ROOT_URL=http://automation-jobs.livecareer.com:9191/job/
+
+#================================================================================================================================
+                                        ## SQL SERVER HOST
+#================================================================================================================================
+
+#SQL Server Host Properties
+SQL_HOST=${dbHostIP}
+SQL_PORT=${dbHostPort}
+SQL_DB_NAME=${sqlHostDBName}
+SQL_USER=${dbHostUserName}
+SQL_PASSWORD=${dbHostPassword}
+
+#=================================================================================================================================
+                                    #Test Link/ALM Server Details
+#=================================================================================================================================
+
+ALM_TEST_RESULTS_LOGGING=false
+ALM_SERVER_API=http://autoqa07.canadacentral.cloudapp.azure.com/testlink/lib/api/xmlrpc/v1/xmlrpc.php
+ALM_ACCOUNT_API_KEY=e7293f96c084c38d15f9a18f64681423
+ALM_PROJECT_NAME=${almProjectName}
+ALM_TEST_PLAN_NAME=${almTestPlanName}
+ALM_TEST_BUILD_NAME=${almTestBuildName}
+
+#=================================================================================================================================
+                                    #Web Service Details
+#=================================================================================================================================
+
+AUTH_SERVICE_URL = https://sandbox-auth.livecareer.com/oauth/token
+EXPERIMENT_SERVICE_URL = https://api-sandbox-experiment.livecareer.com
+MIX_PANEL_SECRET_KEY = 440f2dc23310abbe0bf3e23ff5c00354
+USER_SERVICE_URL = http://api-sandbox-userv2.livecareer.eu
+CONTENT_SEARCH_SERVICE_URL = ${contentSearchServiceUrl}
+VISITOR_SERVICE_URL= ${visitorServiceUrl}
+ORDER_SERVICE_URL=http://api-sandbox-order.livecareer.com
+SURVEY_SERVICE_URL = ${surveyServiceUrl}
+DOC_SERVICE_URL = ${docServiceUrl}
+PORTAL_CD=RSMNA
+GDPR_SERVICE_URL=${gdprServiceURL}
+TRANSUNION_SERVICE_URL=${transUnionServiceURL}
+USERPROFILE_SERVICE_URL=${userProfileServiceURL}
+PAYMENT_SERVICE_URL=http://api-sandbox-ecom.livecareer.com
+SHARED_SERVICE_URL=http://reg-shared.livecareer.com
+ECOM_SERVICE_URL=https://api-regression-embeddedecom.livecareer.com
+FEATURE_FLAG_URL=${featureFlagURL}
+CONFIG_SERVICE_URL=${configServiceURL}
+RHCUSTOMER_SERVICE_URL=${rhCustServiceURL}
+#=================================================================================================================================
+                                    #Visual review server Details
+#=================================================================================================================================
+
+#Enable/Disable Visual Review
+VISUAL_REVIEW_ENABLED=false
+#Visual Review Project Name to be logged in Visual Review Server if set as NONE default Product name is been picked
+VISUAL_REVIEW_PROJECT_NAME=RN Ecom
+#Visual Review Server Hostname
+VISUAL_REVIEW_HOSTNAME=10.0.0.4
+#Visual Review Server Port
+VISUAL_REVIEW_PORT=7000
+#Visual Review Acceptable Difference (%) between baseline and recent image Default as 0
+VISUAL_REVIEW_DIFF_PERCENTAGE=0
+#Accept Visual Review New Images having no Baseline default as false
+AUTO_ACCEPT_NEW_VISUAL_IMAGE=false
+#Accept Visual Review Differences if they are below acceptable difference percentage defined above default as false
+AUTO_ACCEPT_VISUAL_DIFFS=false
+#Run Visual Review without Browsers meta data properties
+EXCLUDE_VISUAL_REVIEW_ATTRIBUTES=true
+
+#================================================================================================================================
+                                        ## REPORTING PARAMETERS
+#================================================================================================================================
+
+#change results directory
+livecareer.reports.dir=Recording
+
+#Current Release Number
+livecareer.release.number=MPR-5.0.4
+
+#Environment URL
+livecareer.environment.url=http://www.livecareer.com/
+
+#change header text
+livecareer.proj.header.text=Automation Run Report
+
+#specify your project description
+livecareer.proj.description=MyProject Testing Reports
+
+#An option for the user to set whether screenshots should be taken or not regardless of what the user has logged in the script.
+#Setting false for taking screenshots results in faster execution time. This option is best suitable when you use HtmlUnitDriver
+livecareer.reports.takescreenshot=true
+
+#An option for the user to set whether HtmlScreenshot should be taken or not regardless of what the user has logged in the script.
+#Setting false for taking HtmlScreenshot results in faster execution time. This option is best suitable when you use HtmlUnitDriver
+livecareer.environment.captureHtmlScreenshot=false
+
+#User has the option to choose whether configuration reports should be generated or not
+#Available options: true, false
+livecareer.reports.configurationreports=true
+
+#generate excel reports - the first preview of excel reports - with noticeable limitations
+#Available options: true, false
+livecareer.reports.excel=false
+
+#when a user logs the step as failed (using LogAs parameter), you can continue execution of the remaining steps using this property
+#Available options: true, false
+livecareer.reports.continueExecutionAfterStepFailed = true
+
+#Record test execution
+#testmethod: recored execution for every single test method in its own movie file, not yet implemented
+#suite: record execution of complete suite in a single movie file
+#Available options: suite, none
+livecareer.reports.recordExecution=none
+
+#Maximum number of runs to generate, not yet implemented
+livecareer.reports.setMaxRuns = 100
+
+
+#generate pdf reports, not yet implemented
+livecareer.reports.pdf=false
+
+#sync drive property
